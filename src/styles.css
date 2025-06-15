@@ -1,8 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import "tailwindcss";
+
 @plugin "tailwindcss-primeui";
+
+@font-face {
+    font-family: 'QuiapoFree2-Regular';
+    src: url('./assets/fonts/QuiapoFree2-Regular.otf') format('opentype');
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
   /* Add a generic font family as a fallback */
+}
+
+:root {
+  --balarila-primary-green: #27AE60;
+  --balarila-secondary-green: #006937;
+  --p-menuitem-text-color: white; /* Inherits from global text */
 }
