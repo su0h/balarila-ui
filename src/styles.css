@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  /* Add a generic font family as a fallback */
+}
