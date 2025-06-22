@@ -1,33 +1,35 @@
-import { Component, OnInit } from '@angular/core';
-import { MenubarModule } from 'primeng/menubar';
-import { MenuItem } from 'primeng/api';
+import { Component, HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
-  imports: [MenubarModule],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
-  items: MenuItem[] = [];
+export class NavbarComponent {
+  isMenuOpen = false;
+  isMobile = false;
 
-  ngOnInit(): void {
-    this.items = [
-      {
-        label: 'Home',
-        routerLink: '/',
-        styleClass: 'navbar-item'
-      },
-      {
-        label: 'Balarila',
-        routerLink: '/grammar-checker',
-        styleClass: 'navbar-item'
-      },
-      {
-        label: 'Corruption',
-        routerLink: '/corruption',
-        styleClass: 'navbar-item'
-      },
-    ]
+  constructor() {
+    this.checkScreenWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event): void {
+    this.checkScreenWidth();
+  }
+
+  checkScreenWidth(): void {
+    this.isMobile = window.innerWidth <= 768;
+    if (!this.isMobile) {
+      this.isMenuOpen = false; 
+    }
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

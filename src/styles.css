@@ -2,6 +2,7 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-primeui";
+@import "primeicons/primeicons.css";
 
 @font-face {
     font-family: 'QuiapoFree2-Regular';
@@ -14,7 +15,6 @@ body {
 }
 
 :root {
-  --balarila-primary-green: #27AE60;
-  --balarila-secondary-green: #006937;
-  --p-menuitem-text-color: white; /* Inherits from global text */
+  --balarila-green: #27AE60;
+  --balarila-dark-green: #006937;
 }
