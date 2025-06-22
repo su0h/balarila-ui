@@ -1,0 +1,19 @@
+.header-text {
+    font-family: 'Bebas Neue';
+    font-size: 55px;
+}
+.header-text .header-text-balarila {
+    font-family: 'QuiapoFree2-Regular';
+    color: var(--balarila-green);
+}
+
+::ng-deep .try-balarila-button > .p-button {
+    background-color: var(--balarila-green); /* Your desired background color */
+    border-color: var(--balarila-green); /* Matching border color */
+    color: white; /* Text color */
+}
+
+::ng-deep .try-balarila-button > .p-button:hover {
+    background-color: var(--balarila-dark-green); /* Your desired background color */
+    border-color: var(--balarila-dark-green); /* Matching border color */
+}
