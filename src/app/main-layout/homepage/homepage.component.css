@@ -1,19 +1,164 @@
-.header-text {
-    font-family: 'Bebas Neue';
-    font-size: 55px;
+/* --- Root Variables and Global Styles --- */
+html {
+    scroll-behavior: smooth;
 }
+
+/* --- Main Layout Containers --- */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.landing-container {
+    /* From Tailwind: flex flex-col items-center justify-center min-h-screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    /* Original Styles */
+    background-image: url('/assets/balarila-background.png');
+    background-size: cover;
+}
+
+.content-section {
+    /* From Tailwind: flex flex-col justify-center min-h-screen px-10 border-t-60 border-[var(--balarila-dark-green)] */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding-left: 2.5rem;  /* 10 * 0.25rem */
+    padding-right: 2.5rem; /* 10 * 0.25rem */
+    border-top: 60px solid var(--balarila-dark-green); /* Assuming border-t-60 meant 60px */
+}
+
+.content-wrapper {
+    /* From Tailwind: max-w-prose mx-auto pt-10 text-neutral-800 */
+    max-width: 100ch; /* 'prose' in Tailwind is 65 characters wide */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2.5rem; /* 10 * 0.25rem */
+    color: #404040; /* neutral-800 */
+}
+
+
+/* --- Header and Text Styles --- */
+.header-text-container {
+    /* From Tailwind: w-full text-center py-5 */
+    width: 100%;
+    text-align: center;
+    padding-top: 1.25rem;  /* 5 * 0.25rem */
+    padding-bottom: 1.25rem; /* 5 * 0.25rem */
+    
+    /* Original Styles */
+    box-shadow: 0px 2px 10px rgb(0 0 0 / 0.4);
+    background-color: var(--balarila-dark-green);
+}
+
+.header-text {
+    /* From Tailwind: text-[30px] sm:text-[35px] lg:text-[55px] lg:px-50 xl:px-75 */
+    font-size: 30px;
+
+    /* Original Styles */
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    line-height: 100%;
+    color: white;
+}
+
 .header-text .header-text-balarila {
-    font-family: 'QuiapoFree2-Regular';
-    color: var(--balarila-green);
+    font-weight: 700;
+}
+
+.section-header-text {
+    /* From Tailwind: text-[30px] text-center md:text-left mb-4 */
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 1rem; /* 4 * 0.25rem */
+    
+    /* Original Styles */
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+}
+
+.section-spacing {
+    /* From Tailwind: mt-8 */
+    margin-top: 2rem; /* 8 * 0.25rem */
+}
+
+.paragraph {
+    /* From Tailwind: mb-4 text-justify */
+    margin-bottom: 1rem; /* 4 * 0.25rem */
+    text-align: justify;
+}
+
+
+/* --- Button and Link Styles --- */
+.try-button-container {
+    /* From Tailwind: flex justify-center items-center w-full mt-10 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 2.5rem; /* 10 * 0.25rem */
 }
 
 ::ng-deep .try-balarila-button > .p-button {
-    background-color: var(--balarila-green); /* Your desired background color */
-    border-color: var(--balarila-green); /* Matching border color */
-    color: white; /* Text color */
+    background-color: var(--balarila-dark-green);
+    border-color: var(--balarila-dark-green);
+    border-radius: 5px;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0px 2px 10px rgb(0 0 0 / 0.4);
+    transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
 ::ng-deep .try-balarila-button > .p-button:hover {
-    background-color: var(--balarila-dark-green); /* Your desired background color */
-    border-color: var(--balarila-dark-green); /* Matching border color */
+    background-color: var(--balarila-green);
+    border-color: var(--balarila-green);
+}
+
+.link {
+    /* From Tailwind: text-blue-600 hover:text-blue-800 underline */
+    color: #2563eb; /* blue-600 */
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #1e40af; /* blue-800 */
+}
+
+
+/* --- Responsive Media Queries (from Tailwind breakpoints) --- */
+/* sm: Small screens (640px and up) */
+@media (min-width: 640px) {
+    .header-text {
+        font-size: 35px;
+    }
+}
+
+/* md: Medium screens (768px and up) */
+@media (min-width: 768px) {
+    .section-header-text {
+        text-align: left;
+    }
+}
+
+/* lg: Large screens (1024px and up) */
+@media (min-width: 1024px) {
+    .header-text {
+        font-size: 55px;
+        padding-left: 12.5rem;  /* A guess for lg:px-50 */
+        padding-right: 12.5rem;
+    }
+}
+
+/* xl: Extra large screens (1280px and up) */
+@media (min-width: 1280px) {
+    .header-text {
+        padding-left: 18.75rem; /* A guess for xl:px-75 */
+        padding-right: 18.75rem;
+    }
 }

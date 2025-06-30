@@ -6,7 +6,7 @@
     min-width: 300px;
     display: flex;
     align-items: center;
-    background-color: var(--balarila-green);
+    background-color: var(--balarila-dark-green);
     box-shadow: 0px 2px 10px rgb(0 0 0 / 0.4);
     transition: box-shadow 0.3s ease;
 }
@@ -29,8 +29,8 @@
     font-size: 3em;
     color: white;
     text-decoration: none;
-    text-shadow: -3px 2px var(--balarila-dark-green);
-    background-color: var(--balarila-green);
+    /* text-shadow: -3px 2px var(--balarila-green); */
+    background-color: var(--balarila-dark-green);
 }
 
 .hamburger-menu-button {
@@ -38,7 +38,8 @@
     z-index: 1002;
     display: none;
     padding: 8px 0 0 4px;
-    color: var(--balarila-dark-green);
+    /* color: var(--balarila-green); */
+    color: white;
     cursor: pointer;
 }
 
