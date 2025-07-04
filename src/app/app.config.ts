@@ -2,9 +2,9 @@ import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
-import Nora from '@primeng/themes/nora';
 
 import { routes } from './app.routes';
+import { BalarilaPreset } from './balarila.preset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(),
     providePrimeNG({
         theme: {
-            preset: Nora,
+            preset: BalarilaPreset,
             options: {
                 prefix: 'p',
                 darkModeSelector: false,

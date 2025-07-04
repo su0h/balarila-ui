@@ -1,0 +1,31 @@
+<nav class="navbar" [class.no-shadow]="isMobile && isMenuOpen">
+    <div class="hamburger-menu-button" (click)="toggleMenu()" *ngIf="isMobile">
+        <i 
+        class="pi pi-bars" 
+        style="font-size: 1.5rem;" 
+        [style.opacity]="isMenuOpen ? 0.5 : 1"
+        ></i>
+    </div>
+
+    <div class="navbar-logo-container">
+        <a routerLink="/" class="logo">BALARILA</a>
+    </div>
+
+    @if(!isMobile) {
+        <ng-container *ngTemplateOutlet="navLinks"></ng-container>
+    }
+</nav>
+
+@if(isMobile) {
+    <ng-container *ngTemplateOutlet="navLinks"></ng-container>
+}
+
+<div class="menu-blur-overlay" [class.active]="isMenuOpen && isMobile" (click)="toggleMenu()"></div>
+
+<ng-template #navLinks>
+    <ul class="navbar-buttons-container" [class.open]="isMenuOpen && isMobile">
+        <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMobile && toggleMenu()">Home</a></li>
+        <li><a routerLink="/grammar-checker" routerLinkActive="active" (click)="isMobile && toggleMenu()">Balarila</a></li>
+        <li><a routerLink="/corruption" routerLinkActive="active" (click)="isMobile && toggleMenu()">Corruption</a></li>
+    </ul>
+</ng-template>
