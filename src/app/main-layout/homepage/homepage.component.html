@@ -1,1 +1,31 @@
-<p>homepage works!</p>
+<div class="main-container">
+    <div class="landing-container">
+        <div class="header-text-container">
+            <h1 class="header-text">
+                <span class="header-text-balarila">Balarila</span>: Revolutionizing Filipino Grammar Correction with Deep Learning
+            </h1>
+        </div>
+        <div class="try-button-container">
+            <p-button class="try-balarila-button" (onClick)="tryButtonClickHandler()">Try Balarila</p-button>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="content-wrapper">
+            <h2 class="section-header-text">What is Balarila?</h2>
+            <p class="paragraph">
+                <strong style="color: var(--balarila-dark-green)">Balarila</strong> is a <strong>Filipino Grammar Error Correction (GEC) model</strong>, developed as a <strong>proof of concept</strong> through advanced deep learning research. Its core purpose is to demonstrate how deep learning can tackle a specific, complex challenge: correcting <strong>semantic errors</strong> in Filipino text. Unlike existing rule-based Filipino grammar checkers, Balarila explores the deeper meaning and structural nuances of sentences.
+            </p>
+
+            <h2 class="section-header-text section-spacing">Creating Balarila</h2>
+            <p class="paragraph">
+                Our development process involved overcoming significant hurdles – particularly the scarcity of suitable Filipino text datasets. We created an <strong>automated sentence corruption pipeline</strong> to create a robust synthetic corpora for our training needs. This enabled us to fine-tune state-of-the-art <strong>Tagalog BERT</strong> and <strong>RoBERTa</strong> models significantly better – showcasing the potential for highly accurate Filipino grammar error correction.
+            </p>
+
+            <h2 class="section-header-text section-spacing">Disclaimer</h2>
+            <p class="paragraph">
+                <strong><i>Please be aware that Balarila is a research prototype and is not meant for real-world applications.</i></strong> It serves as a valuable academic contribution – highlighting new possibilities in Natural Language Processing for the Filipino language. For a comprehensive look at Balarila's methodology and evaluation, you can refer to our <a href="https://aclanthology.org/2023.sealp-1.3.pdf" target="_blank" class="link">published research paper</a>.
+            </p>
+        </div>
+    </div>
+</div>
